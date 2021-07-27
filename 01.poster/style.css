@@ -1,5 +1,6 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
 
+/* BODY DEFAULT */
 body {
     background-color: #F6F6F6;
     padding: 50px 25px;
@@ -7,4 +8,37 @@ body {
     max-width: 770px;
     width: 100%;
     margin: 0 auto;
+}
+
+/* HEADER */
+header .main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 2px solid #000;
+    padding-bottom: 15px;
+}
+header .main .title--paris {
+    font-size: 120px;
+    font-weight: 500;
+}
+header .main .title--numbers {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+header .sub {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    line-height: 1.2;
+}
+header .sub .right {
+    display: flex;
+}
+header .sub .right ul:first-child {
+    margin-right: 60px;
 }
