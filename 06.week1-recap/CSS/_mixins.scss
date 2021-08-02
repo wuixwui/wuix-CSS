@@ -1,0 +1,16 @@
+%circle-line {
+  width: 10px;
+  height: 10px;
+  border: 2px solid $colorGray;
+  border-radius: 5px;
+}
+%arrange-center {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+%mirror-v {
+  display: inline-block;
+  transform: rotate(180deg);
+}
