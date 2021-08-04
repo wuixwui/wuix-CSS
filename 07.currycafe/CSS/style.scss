@@ -1,0 +1,140 @@
+@import "_variables";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @extend %flexCenter;
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  background: #efe754;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 4vw 1fr 4vw;
+  grid-template-columns: 4vw 1fr 4vw;
+  border: 4px solid #ff6c2c;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+}
+.container > * {
+  overflow: hidden;
+}
+header {
+  @extend %flexCenter;
+  grid-column: 1 / 4;
+  grid-row: 1 / 2;
+  background: #fff;
+  font-size: 1.5vw;
+  color: #ff6c2c;
+}
+.header__container {
+  white-space: nowrap;
+}
+main {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  @extend %flexCenter;
+  position: relative;
+  border: 4px solid #ff6c2c;
+  .main_title {
+    position: absolute;
+    align-self: center;
+    font-size: 5vw;
+    color: #fff;
+    font-weight: 900;
+  }
+  .image1 {
+    width: 50%;
+    height: 100%;
+    background: #40ac49;
+  }
+  .image2 {
+    width: 50%;
+    height: 100%;
+    background: #ff6c2c;
+  }
+}
+.left {
+  grid-row: 2/3;
+  grid-column: 1/2;
+  @extend %flexCenter;
+  writing-mode: vertical-rl;
+  background: #ff6c2c;
+  color: #ff6c2c;
+  font-size: 1vw;
+  .left_menu1 {
+    width: 100%;
+    height: 100%;
+    @extend %flexCenter;
+    overflow: hidden;
+    text-orientation: upright;
+    color: #fff;
+    font-style: italic;
+    font-weight: 700;
+  }
+  .left_menu2 {
+    @extend %flexCenter;
+    width: 100%;
+    height: 40%;
+    overflow: hidden;
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    background: #fff;
+    font-style: italic;
+  }
+  .left_menu3 {
+    @extend %flexCenter;
+    overflow: hidden;
+    width: 100%;
+    height: 20%;
+    border-top: 4px solid #ff6c2c;
+    border-bottom: 4px solid #ff6c2c;
+    background: #fff;
+  }
+}
+.right {
+  grid-row: 2/3;
+  grid-column: 3/4;
+  @extend %flexCenter;
+  background: #40ac49;
+  padding: none;
+  color: #fff;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: 1.2vw;
+  .right_menu1 {
+    @extend %flexCenter;
+    border-top: 4px solid #ff6c2c;
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    writing-mode: vertical-lr;
+    font-style: italic;
+  }
+  .right_menu2 {
+    @extend %flexCenter;
+    border-top: 4px solid #ff6c2c;
+    border-bottom: 4px solid #ff6c2c;
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    writing-mode: vertical-lr;
+    font-style: italic;
+  }
+}
+footer {
+  @extend %flexCenter;
+  grid-row: span 1 / -1;
+  grid-column: 1/-1;
+  background-color: #fff;
+  font-size: 1.5vw;
+  color: #ff6c2c;
+}
+.footer__container {
+  white-space: nowrap;
+}
