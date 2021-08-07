@@ -1,0 +1,204 @@
+@import "_variables";
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @extend %flexCenter;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.container {
+  overflow: hidden;
+  width: 90%;
+  height: 90%;
+  border-radius: 15px;
+  background-image: url("../images/screentine_3.jpg");
+  background-size: cover;
+  & > header {
+    @extend %flexCenter;
+    justify-content: flex-start;
+    height: 30px;
+    padding: 0 15px;
+    background: #fff;
+    border-bottom: 2.4px solid #000;
+    font-size: 1.4rem;
+    .logo-image {
+      @extend %flexCenter;
+      height: 30px;
+      width: 40px;
+      background-color: #000;
+      & > img {
+        width: 22px;
+      }
+    }
+    & > * {
+      padding: 0 10px;
+    }
+  }
+}
+.container > main {
+  @extend %flexCenter;
+  height: 90%;
+  margin: 0 20px 0 15px;
+  background-color: #fff;
+  border: 2.5px solid #000;
+  box-shadow: 5px 5px 0 #000;
+  border-top: none;
+  background-image: url("../images/screentine_2.jpg");
+  overflow: hidden;
+  /* MAIN LEFT */
+  .left_table {
+    overflow: auto;
+    width: 60%;
+    height: 100%;
+
+    .left_item_grid {
+      border: 2px solid #000;
+      border-top: 0;
+      display: grid;
+      width: 100%;
+      grid-template-columns: 30px minmax(250px, 3fr) 1fr;
+      grid-template-rows: repeat(2, minmax(30px, 60px));
+      background: #fff;
+      font-size: 20px;
+
+      &:hover {
+        z-index: 10;
+        background-color: #000;
+        color: #fff;
+        border: 2px solid #fff;
+        .left_main_title {
+          border-left: 2px solid #fff;
+          border-right: 2px solid #fff;
+        }
+        .left_top_option {
+          border-bottom: 2px solid #fff;
+        }
+        .left_bottom_option {
+          .option_box {
+            background: #fff;
+            color: #000;
+          }
+        }
+      }
+      .left_sub_title {
+        @extend %flexCenter;
+        width: 100%;
+        height: 100%;
+        grid-row: 1 / -1;
+        transform: rotate(180deg);
+        writing-mode: vertical-lr;
+      }
+      .left_main_title {
+        @extend %flexCenter;
+        justify-content: flex-start;
+        grid-row: 1 / -1;
+        grid-column: 2 / 3;
+        padding: 10px;
+        font-size: 60px;
+        border-left: 2px solid #000;
+        border-right: 2px solid #000;
+      }
+      .left_top_option {
+        @extend %flexCenter;
+        border-bottom: 2px solid #000;
+      }
+      .left_bottom_option {
+        @extend %flexCenter;
+        .option_box {
+          @extend %flexCenter;
+          background: #000;
+          border-radius: 30px;
+          width: 80%;
+          height: 70%;
+          color: #fff;
+        }
+      }
+    }
+  }
+  /* CENTER LINE */
+  .center_line {
+    @extend %flexCenter;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 3%;
+    min-width: 40px;
+    height: 100%;
+    & > * {
+      @extend %flexCenter;
+      justify-content: space-between;
+      width: 100%;
+      height: 100%;
+      min-height: 300px;
+      writing-mode: vertical-lr;
+      font-size: 20px;
+      padding: 15px 0;
+      border: 2.4px solid #000;
+    }
+    .center_logo {
+      position: relative;
+      & > img {
+        display: block;
+        z-index: 2;
+        position: absolute;
+        bottom: -20px;
+        width: 100%;
+      }
+    }
+    & > :nth-child(2) {
+      transform: rotate(180deg);
+      background: url("../images/screentine_3.jpg");
+    }
+  }
+  /* MAIN RIGHT */
+  .right_table {
+    display: grid;
+    overflow: auto;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: 30px;
+    grid-auto-rows: minmax(max-content, 200px);
+    width: 37%;
+    height: 100%;
+    padding: 10px;
+    background: #fff;
+    & > header {
+      @extend %flexCenter;
+      justify-content: space-between;
+      padding: 0 5px;
+      margin-bottom: 20px;
+      grid-column: 1 / -1;
+      & > div {
+        @extend %flexCenter;
+        .select_radio {
+          border: 2px solid #000;
+          border-radius: 50%;
+          width: 10px;
+          height: 10px;
+          margin-right: 5px;
+        }
+      }
+      :nth-child(3) {
+        .select_radio {
+          background-color: #000;
+        }
+      }
+    }
+    .right_item {
+      border-top: 2px solid #000;
+      margin: 5px;
+      padding: 10px;
+      h3 {
+        font-size: 25px;
+      }
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+}

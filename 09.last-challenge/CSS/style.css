@@ -1,0 +1,249 @@
+body, .container > header, .container > header .logo-image, .container > main, .container > main .left_table .left_item_grid .left_sub_title, .container > main .left_table .left_item_grid .left_main_title, .container > main .left_table .left_item_grid .left_top_option, .container > main .left_table .left_item_grid .left_bottom_option, .container > main .left_table .left_item_grid .left_bottom_option .option_box, .container > main .center_line, .container > main .center_line > *, .container > main .right_table > header, .container > main .right_table > header > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.container {
+  overflow: hidden;
+  width: 90%;
+  height: 90%;
+  border-radius: 15px;
+  background-image: url("../images/screentine_3.jpg");
+  background-size: cover;
+}
+
+.container > header {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  height: 30px;
+  padding: 0 15px;
+  background: #fff;
+  border-bottom: 2.4px solid #000;
+  font-size: 1.4rem;
+}
+
+.container > header .logo-image {
+  height: 30px;
+  width: 40px;
+  background-color: #000;
+}
+
+.container > header .logo-image > img {
+  width: 22px;
+}
+
+.container > header > * {
+  padding: 0 10px;
+}
+
+.container > main {
+  height: 90%;
+  margin: 0 20px 0 15px;
+  background-color: #fff;
+  border: 2.5px solid #000;
+  -webkit-box-shadow: 5px 5px 0 #000;
+          box-shadow: 5px 5px 0 #000;
+  border-top: none;
+  background-image: url("../images/screentine_2.jpg");
+  overflow: hidden;
+  /* MAIN LEFT */
+  /* CENTER LINE */
+  /* MAIN RIGHT */
+}
+
+.container > main .left_table {
+  overflow: auto;
+  width: 60%;
+  height: 100%;
+}
+
+.container > main .left_table .left_item_grid {
+  border: 2px solid #000;
+  border-top: 0;
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  -ms-grid-columns: 30px minmax(250px, 3fr) 1fr;
+      grid-template-columns: 30px minmax(250px, 3fr) 1fr;
+  -ms-grid-rows: (minmax(30px, 60px))[2];
+      grid-template-rows: repeat(2, minmax(30px, 60px));
+  background: #fff;
+  font-size: 20px;
+}
+
+.container > main .left_table .left_item_grid:hover {
+  z-index: 10;
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.container > main .left_table .left_item_grid:hover .left_main_title {
+  border-left: 2px solid #fff;
+  border-right: 2px solid #fff;
+}
+
+.container > main .left_table .left_item_grid:hover .left_top_option {
+  border-bottom: 2px solid #fff;
+}
+
+.container > main .left_table .left_item_grid:hover .left_bottom_option .option_box {
+  background: #fff;
+  color: #000;
+}
+
+.container > main .left_table .left_item_grid .left_sub_title {
+  width: 100%;
+  height: 100%;
+  grid-row: 1 / -1;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+}
+
+.container > main .left_table .left_item_grid .left_main_title {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  grid-row: 1 / -1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  padding: 10px;
+  font-size: 60px;
+  border-left: 2px solid #000;
+  border-right: 2px solid #000;
+}
+
+.container > main .left_table .left_item_grid .left_top_option {
+  border-bottom: 2px solid #000;
+}
+
+.container > main .left_table .left_item_grid .left_bottom_option .option_box {
+  background: #000;
+  border-radius: 30px;
+  width: 80%;
+  height: 70%;
+  color: #fff;
+}
+
+.container > main .center_line {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 3%;
+  min-width: 40px;
+  height: 100%;
+}
+
+.container > main .center_line > * {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  font-size: 20px;
+  padding: 15px 0;
+  border: 2.4px solid #000;
+}
+
+.container > main .center_line .center_logo {
+  position: relative;
+}
+
+.container > main .center_line .center_logo > img {
+  display: block;
+  z-index: 2;
+  position: absolute;
+  bottom: -20px;
+  width: 100%;
+}
+
+.container > main .center_line > :nth-child(2) {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  background: url("../images/screentine_3.jpg");
+}
+
+.container > main .right_table {
+  display: -ms-grid;
+  display: grid;
+  overflow: auto;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  -ms-grid-rows: 30px;
+      grid-template-rows: 30px;
+  grid-auto-rows: minmax(-webkit-max-content, 200px);
+  grid-auto-rows: minmax(max-content, 200px);
+  width: 37%;
+  height: 100%;
+  padding: 10px;
+  background: #fff;
+}
+
+.container > main .right_table > header {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 5px;
+  margin-bottom: 20px;
+  grid-column: 1 / -1;
+}
+
+.container > main .right_table > header > div .select_radio {
+  border: 2px solid #000;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+}
+
+.container > main .right_table > header :nth-child(3) .select_radio {
+  background-color: #000;
+}
+
+.container > main .right_table .right_item {
+  border-top: 2px solid #000;
+  margin: 5px;
+  padding: 10px;
+}
+
+.container > main .right_table .right_item h3 {
+  font-size: 25px;
+}
+
+.container > main .right_table .right_item p {
+  font-size: 18px;
+}
