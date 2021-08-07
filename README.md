@@ -26,6 +26,6 @@ SCSS practice
 ## 08
 ![image](https://user-images.githubusercontent.com/78251048/128604588-4a051bfa-fd83-4472-902c-7b951bf95fcf.png)
 
-##09
+## 09
 ![image](https://user-images.githubusercontent.com/78251048/128604629-e63f03a3-6519-4e98-a7bf-9a19d385b2e0.png)
 
